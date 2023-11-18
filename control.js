@@ -173,8 +173,12 @@ function submitForm() {
   var inputs = document.querySelectorAll("input, select");
   inputs.forEach(function (input) {
     // Kiểm tra nếu là input hoặc select có giá trị
-    if (input.value.trim() !== "") {
-      // Lưu trữ giá trị vào đối tượng JSON
+    if (input.type === "radio") {
+      // For radio buttons, check if they are checked
+      if (input.checked) {
+        formData[input.name] = input.value;
+      }
+    } else if (input.value.trim() !== "") {
       formData[input.id] = input.value;
     }
   });
