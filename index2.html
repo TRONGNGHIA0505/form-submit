@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="./assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="./assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="./assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>DỮ LIỆU HỒ SƠ ĐẢNG VIÊN</title>
+    <style>
+#list_tinh, #list_huyen, #list_xa{
+    
+    padding: 5px;
+    margin: 5px;
+    display: none;
+    position: absolute;
+    height: 100px;
+    overflow: scroll;
+    background-color: white;
+}
+
+li:hover{
+    background-color: #f1f1f1;
+}
+
+    </style>
+</head>
+
+<body>
+    <section style="width: 70%; margin: 0 auto;">
+        <div class="layout-wrapper layout-content-navbar">
+            <div class="layout-container">
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <div class="card mb-4">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0">THÔNG TIN CƠ BẢN</h5>
+                                    <!-- <small class="text-muted float-end">Merged input group</small> -->
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Chi bộ</label>
+                                            <div class="col-sm-10">
+                                                <select name="chibo" id="chibo"
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="1">Chi bộ 1</option>
+                                                    <option value="2">Chi bộ 2</option>
+                                                    <option value="3">Chi bộ 3</option>
+                                                    <option value="4">Chi bộ 4</option>
+                                                    <option value="5">Chi bộ 5</option>
+                                                    <option value="6">Chi bộ 6</option>
+                                                    <option value="7">Chi bộ 7</option>
+                                                    <option value="8">Chi bộ 8</option>
+                                                    <option value="9">Chi bộ 9</option>
+                                                    <option value="10">Chi bộ 10</option>
+                                                    <option value="11">Chi bộ 11</option>
+                                                    <option value="12">Chi bộ 12</option>
+                                                    <option value="13">Chi bộ 13</option>
+                                                    <option value="14">Chi bộ 14</option>
+                                                    <option value="15">Chi bộ 15</option>
+                                                    <option value="16">Chi bộ 16</option>
+                                                    <option value="18">Chi bộ 18</option>
+                                                    <option value="20">Chi bộ 20</option>
+                                                    <option value="23">Chi bộ 23</option>
+                                                    <option value="24">Chi bộ 24</option>
+                                                    <option value="26">Chi bộ 26</option>
+                                                    <option value="27">Chi bộ 27</option>
+                                                    <option value="28">Chi bộ 28</option>
+                                                    <option value="29">Chi bộ 29</option>
+                                                    <option value="sv1">Chi bộ Sinh Viên 1</option>
+                                                    <option value="sv2">Chi bộ Sinh Viên 2</option>
+                                                    <option value="sv3">Chi bộ Sinh Viên 3</option>
+                                                    <option value="sv4">Chi bộ Sinh Viên 4</option>
+                                                    <option value="sv5">Chi bộ Sinh Viên 5</option>
+                                                    <option value="sv6">Chi bộ Sinh Viên 6</option>
+                                                    <option value="sv7">Chi bộ Sinh Viên 7</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Đối tượng</label>
+                                            <div class="col-sm-10">
+                                                <select name="doituong" id="doituong"
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="đvcbvc">Đảng viên là CBVC</option>
+                                                    <option value="đvsv">Đảng viên là Sinh viên</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label"
+                                                for="basic-icon-default-fullname">MSSV/CBVC</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="maso"
+                                                        placeholder="19142201 hoặc 026.002.00834" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Họ
+                                                và Tên</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="fullname"
+                                                        placeholder="Họ và Tên" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Số điện thoại</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="sodienthoai"
+                                                        placeholder="0123456789" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Email</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="email"
+                                                        placeholder="vanphongdanguy@hcmute.edu.vn" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Đơn vị</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="doituong" id="doituong" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Khoa Điện - Điện tử">Khoa Điện - Điện tử</option>
+                                                    <option value="Phòng Tổ chức Hành chính">Phòng Tổ chức - Hành chính</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Ngày sinh</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="date" class="form-control" id="engaychinhthuc"
+                                                        placeholder="vanphongdanguy@hcmute.edu.vn" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Giới tính</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="gioitinh" id="gioitinh" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nữ">Nữ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Dân tộc</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="dantoc" id="dantoc" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Kinh">Kinh</option>
+                                                    <option value="Tày">Tày</option>
+                                                    <option value="Thái">Thái</option>
+                                                    <option value="Hoa">Hoa</option>
+                                                    <option value="Khơ-me">Khơ-me</option>
+                                                    <option value="Mường">Mường</option>
+                                                    <option value="Nùng">Nùng</option>
+                                                    <option value="HMông">HMông</option>
+                                                    <option value="Dao">Dao</option>
+                                                    <option value="Gia-rai">Gia-rai</option>
+                                                    <option value="Ngái">Ngái</option>
+                                                    <option value="Ê-đê">Ê-đê</option>
+                                                    <option value="Ba-na">Ba na</option>
+                                                    <option value="Xơ-Đăng">Xơ-Đăng</option>
+                                                    <option value="Sán Chay">Sán Chay</option>
+                                                    <option value="Cơ-ho">Cơ-ho</option>
+                                                    <option value="Chăm">Chăm</option>
+                                                    <option value="Sán Dìu">Sán Dìu</option>
+                                                    <option value="Hrê">Hrê</option>
+                                                    <option value="Mnông">Mnông</option>
+                                                    <option value="Ra-glai">Ra-glai</option>
+                                                    <option value="Xtiêng">Xtiêng</option>
+                                                    <option value="Bru-Vân Kiều">Bru-Vân Kiều</option>
+                                                    <option value="Thổ">Thổ</option>
+                                                    <option value="Giáy">Giáy</option>
+                                                    <option value="Cơ-tu">Cơ-tu</option>
+                                                    <option value="Gié Triêng">Gié Triêng</option>
+                                                    <option value="Mạ">Mạ</option>
+                                                    <option value="Khơ-mú">Khơ-mú</option>
+                                                    <option value="Co">Co</option>
+                                                    <option value="Tà-ôi">Tà-ôi</option>
+                                                    <option value="Chơ-ro">Chơ-ro</option>
+                                                    <option value="Kháng">Kháng</option>
+                                                    <option value="Xinh-mun">Xinh-mun</option>
+                                                    <option value="Hà Nhì">Hà Nhì</option>
+                                                    <option value="Chu ru">Chu ru</option>
+                                                    <option value="Lào">Lào</option>
+                                                    <option value="La Chí">La Chí</option>
+                                                    <option value="La Ha">La Ha</option>
+                                                    <option value="Phù Lá">Phù Lá</option>
+                                                    <option value="La Hủ">La Hủ</option>
+                                                    <option value="Lự">Lự</option>
+                                                    <option value="Lô Lô">Lô Lô</option>
+                                                    <option value="Chứt">Chứt</option>
+                                                    <option value="Mảng">Mảng</option>
+                                                    <option value="Pà Thẻn">Pà Thẻn</option>
+                                                    <option value="Co Lao">Co Lao</option>
+                                                    <option value="Cống">Cống</option>
+                                                    <option value="Bố Y">Bố Y</option>
+                                                    <option value="Si La">Si La</option>
+                                                    <option value="Pu Péo">Pu Péo</option>
+                                                    <option value="Brâu">Brâu</option>
+                                                    <option value="Ơ Đu">Ơ Đu</option>
+                                                    <option value="Rơ măm">Rơ măm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Tôn giáo</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="tongiao" id="tongiao"
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Không">Không</option>
+                                                    <option value="Phật giáo">Phật giáo</option>
+                                                    <option value="Công giáo">Công giáo</option>
+                                                    <option value="Tin lành">Tin lành</option>
+                                                    <option value="Hồi giáo">Hồi giáo</option>
+                                                    <option value="Bà La Môn">Bà La Môn</option>
+                                                    <option value="Đạo Cao Đài">Đạo Cao Đài</option>
+                                                    <option value="Hòa Hảo">Hòa Hảo</option>
+                                                    <option value="Đạo Bửu Sơn Kỳ Hương">Đạo Bửu Sơn Kỳ Hương</option>
+                                                    <option value="Minh Sư Đạo">Minh Sư Đạo</option>
+                                                    <option value="Bahá'í">Bahá'í</option>
+                                                    <option value="Đạo Tứ Ân Hiếu Nghĩa">Đạo Tứ Ân Hiếu Nghĩa</option>
+                                                    <option value="Đạo Tả Thanh Tiên">Đạo Tả Thanh Tiên</option>
+                                                    <option value="Đạo Thái Sơn">Đạo Thái Sơn</option>
+                                                    <option value="Đạo Yeesu">Đạo Yeesu</option>
+                                                    <option value="Tin học đồng bào">Tin học đồng bào</option>
+                                                    <option value="Đạo Giao Lính Bửu">Đạo Giao Lính Bửu</option>
+                                                    <option value="Khác">Khác</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Quê Quán</label>
+                                            <div class="col-sm-4">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="tinh"
+                                                        placeholder="tỉnh Quảng Ngãi" />
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="huyen"
+                                                        placeholder="huyện Sơn Tịnh" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="xa"
+                                                        placeholder="xã Tịnh Hà" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Ngày vào đảng</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="date" class="form-control" id="ngayvaodang"
+                                                        placeholder="vanphongdanguy@hcmute.edu.vn" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Nơi kết nạp Đảng</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="noiketnap"
+                                                        placeholder="Đảng ủy Trường Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Ngày chính thức</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="date" class="form-control" id="ngaychinhthuc"
+                                                        placeholder="vanphongdanguy@hcmute.edu.vn" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Nơi chính thức</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="noichinhthuc"
+                                                        placeholder="Đảng ủy Trường Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Số lý lịch</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="solilich"
+                                                        placeholder="397036HCM" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Số thẻ đảng</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="solilich"
+                                                        placeholder="40.276039" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Học Vấn</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group input-group-merge">
+                                                    <span  class="input-group-text"><i
+                                                            class="bx bx-user"></i></span>
+                                                    <input type="text" class="form-control" id="hocvan"
+                                                        placeholder="12/12" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Học vị</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="hocvi" id="hocvi" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Không">Không</option>
+                                                    <option value="Cử nhân">Cử nhân</option>
+                                                    <option value="Kỹ sư">Kỹ sư</option>
+                                                    <option value="Thạc sĩ">Thạc sĩ</option>
+                                                    <option value="Tiến sĩ">Tiến sĩ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Học hàm</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="hocham" id="hocham" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Không">Không</option>
+                                                    <option value="Phó giáo sư">Phó giáo sư</option>
+                                                    <option value="Giáo sư">Giáo sư</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Trình độ LLCT</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="hocham" id="hocham" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Không">Không</option>
+                                                    <option value="Sơ cấp">Sơ cấp</option>
+                                                    <option value="Trung cấp">Trung cấp</option>
+                                                    <option value="Cao cấp">Cao cấp</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Nghề nghiệp</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="nghenghiep" id="nghenghiep" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Sinh viên">Sinh viên</option>
+                                                    <option value="Giảng viên">Giảng viên</option>
+                                                    <option value="Chuyên viên">Chuyên viên</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Chức vụ Đảng - Đoàn thể</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="chucvudang_doanthe" id="chucvudang_doanthe" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Bí thư Đảng ủy">Bí thư Đảng ủy</option>
+                                                    <option value="Phó Bí thư Đảng ủy">Phó Bí thư Đảng ủy</option>
+                                                    <option value="Chủ nhiệm Ủy ban Ủy ban kiểm tra Đảng ủy">Chủ nhiệm Ủy ban Ủy ban kiểm tra Đảng ủy</option>
+                                                    <option value="Ủy viên Ban thường Đảng ủy">Ủy viên Ban thường vụ Đảng ủy</option>
+                                                    <option value="Đảng ủy viên">Đảng ủy viên</option>
+                                                    <option value="Ủy viên Ủy viên Ban kiểm tra Đảng ủy">Ủy viên Ủy viên Ban kiểm tra Đảng ủy</option>
+                                                    <option value="Không">Không</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="select2Basic" class="col-sm-2 form-label">Chức vụ chính quyền</label>
+                                            <div class="col-sm-10"> 
+                                                <select name="chucvudang_doanthe" id="chucvudang_doanthe" 
+                                                    class="select2 form-select form-select-lg"
+                                                    style="padding: 5px; padding-left: 20px;" data-allow-clear="true">
+                                                    <option value=""></option>
+                                                    <option value="Hiệu trưởng">Hiệu trưởng</option>
+                                                    <option value="Phó Hiệu trưởng">Phó Hiệu trưởng</option>
+                                                    <option value="Trưởng phòng">Trưởng phòng</option>
+                                                    <option value="Ủy viên Ban thường Đảng ủy">Ủy viên Ban thường vụ Đảng ủy</option>
+                                                    <option value="Đảng ủy viên">Đảng ủy viên</option>
+                                                    <option value="Ủy viên Ủy viên Ban kiểm tra Đảng ủy">Ủy viên Ủy viên Ban kiểm tra Đảng ủy</option>
+                                                    <option value="Không">Không</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="control.js"></script>
+
+</html>

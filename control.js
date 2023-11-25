@@ -26,6 +26,7 @@ btnxa.addEventListener("click", function () {
 
 // Sử dụng sự kiện "input" để tìm kiếm tỉnh khi gõ
 btntinh.addEventListener("input", function () {
+  console.log("kkkkk");
   const searchValue = btntinh.value.trim().toLowerCase();
   const provinceList = document.querySelectorAll("#list_tinh li");
   provinceList.forEach((item) => {
